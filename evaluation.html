@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>التقييم</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #007acc;
+      margin-bottom: 30px;
+    }
+    .question {
+      margin-bottom: 25px;
+    }
+    label {
+      font-size: 1.2em;
+      display: block;
+      margin: 10px 0;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .thank-you {
+      display: none;
+      font-size: 1.5em;
+      color: #ff9800;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>تقييم رحلتك التعليمية</h1>
+
+  <div class="question">
+    <label>هل استمتعت بالأنشطة؟</label>
+    <input type="radio" name="q1" value="نعم"> نعم
+    <input type="radio" name="q1" value="لا"> لا
+  </div>
+
+  <div class="question">
+    <label>ما مدى رضاك عن المحتوى؟</label>
+    <input type="range" min="1" max="5" step="1">
+  </div>
+
+  <button onclick="submitEvaluation()">إرسال التقييم</button>
+
+  <div class="thank-you" id="thankYouMessage">شكرًا على تقييمك! 🌟</div>
+
+  <script>
+    function submitEvaluation() {
+      document.getElementById("thankYouMessage").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
